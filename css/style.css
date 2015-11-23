@@ -418,6 +418,7 @@ xcustom form elements
     /* shared style for input elements */
     font-family: "Open Sans", sans-serif;
     border-radius: 5px;
+    color: #78756E;
     background-color: #FFFFFF;
     border: 1px solid #C6C0B5; }
   .cd-filter-block input[type='search'],
@@ -435,7 +436,8 @@ xcustom form elements
     .cd-filter-block input[type='text']:focus,
     .cd-filter-block select:focus {
       outline: none;
-      background-color: #FAF9F8;
+      color: #78756E;
+      background-color: #FFFFFF;
       border-color: #A49F96; }
   .cd-filter-block input[type='search'] {
     /* custom style for the search element */
@@ -454,7 +456,7 @@ xcustom form elements
     content: '';
     position: absolute;
     z-index: 1;
-    right: 14px;
+    right: 15px;
     top: 50%;
     -webkit-transform: translateY(-50%);
     -moz-transform: translateY(-50%);

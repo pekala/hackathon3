@@ -521,6 +521,7 @@ xcustom form elements
 		/* shared style for input elements */
 		font-family: $primary-font;
 		border-radius: 5px;
+		color: $tan-900;
 		background-color: $white-500;
 		border: 1px solid $tan-700;
 	}
@@ -535,7 +536,8 @@ xcustom form elements
 
 		&:focus {
 			outline: none;
-			background-color: $tan-300;
+			color: $tan-900;
+			background-color: $white-500;
 			border-color: $tan-800;
 		}
 	}
@@ -563,10 +565,9 @@ xcustom form elements
 		content: '';
 		position: absolute;
 		z-index: 1;
-		right: 14px;
+		right: 15px;
 		top: 50%;
 		@include transform(translateY(-50%));
-
 		display: block;
 		width: 16px;
 		height: 16px;
