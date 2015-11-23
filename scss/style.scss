@@ -51,7 +51,7 @@ Main Components
 	background-color: $tan-400;
 
 	h1 {
-		color: $color-3;
+		color: $tan-900;
 		line-height: 150px;
 		text-align: center;
 		font-size: 2.4rem;
@@ -234,9 +234,10 @@ xtab-filter
 			display: inline-block;
 			padding: 0 1em;
 			width: auto;
-
-			color: $color-4;
+			font-family: $primary-font;
+			color: $tan-600;
 			text-transform: uppercase;
+			letter-spacing: 1px;
 			font-weight: 700;
 			font-size: 1.3rem;
 
@@ -398,7 +399,7 @@ xfilter
 		z-index: 3;
 
 		.no-touch &:hover {
-			background: darken($color-2, 8%);
+			background: $tangerine-700;
 		}
 	}
 
@@ -519,8 +520,8 @@ xcustom form elements
 		/* shared style for input elements */
 		font-family: $primary-font;
 		border-radius: 0;
-		background-color: $color-3;
-		border: 2px solid darken($color-3, 10%);
+		background-color: $white-500;
+		border: 1px solid $tan-700;
 	}
 
 	input[type='search'],
@@ -533,15 +534,15 @@ xcustom form elements
 
 		&:focus {
 			outline: none;
-			background-color: $color-3;
-			border-color: $color-2;
+			background-color: $tan-300;
+			border-color: $tan-800;
 		}
 	}
 
 	input[type='search'] {
 		/* custom style for the search element */
 		border-color: transparent;
-		background-color: darken($color-3, 10%);
+		background-color: $tan-300;
 		/* prevent jump - ios devices */
 		font-size: 1.6rem !important;
 	}
