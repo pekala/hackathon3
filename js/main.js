@@ -75,7 +75,7 @@ jQuery(document).ready(function($){
 	    	enable: false
 	    },
 	    layout: {
-	    	display: 'block'
+	    	display: 'inline-block'
 	    },
 	    callbacks: {
 	    	onMixStart: function(){

@@ -319,7 +319,7 @@ xgallery
 		}
 
 		li {
-			width: 100%;
+			width: 33%;
 			margin-bottom: 10px;
 		}
 	}
@@ -330,7 +330,7 @@ xgallery
 		@include transition(width .3s);
 
 		li {
-			width: 100%;
+			width: 33%;
 		}
 
 		&.filter-is-visible {
@@ -670,3 +670,5 @@ xcustom form elements
 		display: none;
 	}
 }
+
+@import './drag';
