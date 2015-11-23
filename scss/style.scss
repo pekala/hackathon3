@@ -31,7 +31,7 @@ body {
 		family: $primary-font; // variables inside partials > _variables.scss
 	}
 	color: $color-1;
-	background-color: lighten($color-4, 30%);
+	background-color: $tan-300;
 }
 
 a {
@@ -48,7 +48,7 @@ Main Components
 .cd-header {
 	position: relative;
 	height: 150px;
-	background-color: $color-1;
+	background-color: $tan-400;
 
 	h1 {
 		color: $color-3;
@@ -180,7 +180,7 @@ xtab-filter
 
 		&.selected {
 			background: $color-2;
-			color: $color-3;
+			color: $tangerine-500;
 		}
 	}
 

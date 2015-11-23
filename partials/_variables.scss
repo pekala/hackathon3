@@ -1,9 +1,69 @@
 // colors
 
-$color-1: #331d35; // Bleached Cedar
-$color-2: #41307c; // Minsk
-$color-3: #ffffff; // White
-$color-4: #9a9a9a; // Grey
+$white-500:                 #FFFFFF;
+$black-500:                 #000000;
+
+$tangerine-500:             #F36D5D;
+$tangerine-600:             #E66153;
+$tangerine-700:             #DE5647;
+
+$green-500:                 #56B66A;
+$green-600:                 #50AB62;
+$green-700:                 #3EA351;
+
+$gold-500:                  #F5B859;
+$gold-600:                  #EBA254;
+$gold-700:                  #EB9654;
+
+$red-400:                   #E64954;
+$red-500:                   #D4444E;
+$red-600:                   #BF3D46;
+$red-700:                   #AD373F;
+$red-800:                   #9E333A;
+$red-900:                   #8C2D33;
+
+$grey-200:                  #F2F2F2;
+$grey-300:                  #E6E6E6;
+$grey-400:                  #D6D6D6;
+$grey-500:                  #BBBBBB;
+$grey-600:                  #ADADAD;
+$grey-700:                  #919191;
+$grey-800:                  #787878;
+$grey-900:                  #6B6B6B;
+
+$pewter-300:                #B0C1C2;
+$pewter-400:                #A5B4B5;
+$pewter-500:                #9AA8A9;
+$pewter-600:                #909D9E;
+$pewter-700:                #879394;
+$pewter-800:                #7B8687;
+
+$ebony-500:                 #5F5F5F;
+$ebony-600:                 #4C4C4C;
+$ebony-700:                 #404040;
+$ebony-800:                 #353535;
+
+$tan-300:                   #FAF9F8;
+$tan-400:                   #EFECE6;
+$tan-500:                   #E0DACF;
+$tan-600:                   #D2CCC1;
+$tan-700:                   #C6C0B5;
+$tan-800:                   #A49F96;
+$tan-900:                   #78756E;
+
+$blue-300:                  #76A5CC;
+$blue-400:                  #6F9BBF;
+$blue-500:                  #6891B3;
+$blue-700:                  #6086A6;
+$blue-800:                  #597C99;
+$blue-900:                  #51728C;
+
+
+$color-1: $tangerine-500; // Bleached Cedar
+$color-2: $tangerine-500; // Minsk
+$color-3: $tan-300; // White
+$color-4: $tan-900; // Grey
+
 
 // fonts
 
