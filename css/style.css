@@ -585,7 +585,7 @@ xcustom form elements
   z-index: 99;
   width: 100%;
   height: 17em;
-  background: #F36D5D;
+  background: #cc6055;
   text-align: center;
   -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.6, 0, 0.4, 1);
   transition: transform 0.5s cubic-bezier(0.6, 0, 0.4, 1);
