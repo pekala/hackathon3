@@ -59,10 +59,10 @@ Main Components
 	}
 
 	@include MQ(L) {
-		height: 180px;
+		height: 100px;
 
 		h1 {
-			line-height: 180px;
+			line-height: 100px;
 		}
 	}
 }
@@ -284,9 +284,12 @@ xgallery
 	width: 100%;
 
 	li {
-		margin-bottom: 1.6em;
+		margin-bottom: 10px;
 		box-shadow: 0 1px 4px rgba(#000, .1);
 		display: none;
+		background: white;
+		min-height: 100px;
+		padding: 10px;
 
 		&.gap {
 			/* used in combination with text-align: justify to align gallery elements */
@@ -315,18 +318,18 @@ xgallery
 		}
 
 		li {
-			width: 48%;
-			margin-bottom: 2em;
+			width: 100%;
+			margin-bottom: 10px;
 		}
 	}
 
 	@include MQ(L) {
-		padding: 50px 2%;
+		padding: 10px;
 		float: right;
 		@include transition(width .3s);
 
 		li {
-			width: 23%;
+			width: 100%;
 		}
 
 		&.filter-is-visible {
