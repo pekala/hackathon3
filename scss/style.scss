@@ -121,7 +121,7 @@ xtab-filter
 -------------------------------- */
 
 .cd-tab-filter-wrapper {
-	background-color: $color-3;
+	background-color: $white-500;
 	box-shadow: 0 1px 1px rgba(#000, .08);
 	z-index: 1;
 	@include clearfix;
@@ -156,7 +156,7 @@ xtab-filter
 		position: absolute;
 		top: 0;
 		left: 0;
-
+		border-bottom: 2px solid $tan-600;
 		background-color: $color-3;
 		box-shadow: inset 0 -2px 0 $color-2;
 	}
@@ -372,7 +372,7 @@ xfilter
 		left: 0;
 		height: $tab-filter-height;
 		width: 100%;
-		background-color: $color-2;
+		background-color: $tan-600;
 		z-index: 2;
 	}
 
@@ -388,11 +388,12 @@ xfilter
 		line-height: $tab-filter-height;
 		width: 60px;
 
-		color: $color-3;
+		color: $white-500;
+		text-transform: uppercase;
 		font-size: 1.3rem;
 		text-align: center;
 
-		background: darken($color-2, 5%);
+		background: $tan-600;
 		opacity: 0;
 
 		@include transition(opacity .3s);
