@@ -56,6 +56,20 @@ Main Components
     height: 150px;
     background-color: $tan-400;
 
+    .leftPage {
+        width: 49.8%;
+        float: left;
+        background: $ebony-600;
+        height: 98%;
+    }
+
+    .rightPage {
+        float: right;
+        width: 49.8%;
+        background: $ebony-600;
+        height: 98%;
+    }
+
     h1 {
         color: $tan-900;
         line-height: 150px;
@@ -74,9 +88,31 @@ Main Components
 }
 
 .cd-reader {
-    background-color: $ebony-500;
-    height: 650px;
+    background-color: $ebony-800;
+    height: 860px;
+    padding: 50px;
     h1 {color: white};
+
+    .add-button {
+        background: $tangerine-500;
+        color: $grey-200;
+        border: none;
+        text-transform: uppercase;
+        height: 34px;
+        padding: 2px 22px;
+        border-radius: 20px;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        font-size: 13px;
+        outline: none;
+        margin-top: 14px;
+        float: right;
+
+        &:hover {
+            background: $tangerine-600;
+            cursor: pointer;
+        }
+    }
 }
 
 .grid {
@@ -86,15 +122,50 @@ Main Components
 }
 
 .grid__item {
+    position: relative;
     display: inline-block;
     margin: 0.5em 0.5em;
     border-radius: 4px;
     color: $tan-300;
     text-align: center;
+
     img {
         width: 221px;
         box-shadow: 0px 3px 5px rgba($ebony-800,.3);
     }
+
+    .action {
+        position: absolute;
+        bottom: 2px;
+        right: 0;
+    }
+
+    &:hover {
+        .add-button {
+            display: block;
+        }
+    }
+
+    .add-button {
+        display: none;
+        background: $tangerine-500;
+        color: $grey-200;
+        border: none;
+        text-transform: uppercase;
+        height: 24px;
+        width: 24px;
+        border-radius: 3px;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        outline: none;
+        float: right;
+
+        &:hover {
+            background: $tangerine-600;
+            cursor: pointer;
+        }
+    }
+
 }
 
 .grid__item:hover {

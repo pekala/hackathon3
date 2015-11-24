@@ -96,6 +96,16 @@ Main Components
   position: relative;
   height: 150px;
   background-color: #EFECE6; }
+  .cd-header .leftPage, .cd-reader .leftPage {
+    width: 49.8%;
+    float: left;
+    background: #4C4C4C;
+    height: 98%; }
+  .cd-header .rightPage, .cd-reader .rightPage {
+    float: right;
+    width: 49.8%;
+    background: #4C4C4C;
+    height: 98%; }
   .cd-header h1, .cd-reader h1 {
     color: #78756E;
     line-height: 150px;
@@ -109,10 +119,28 @@ Main Components
         line-height: 100px; } }
 
 .cd-reader {
-  background-color: #5F5F5F;
-  height: 650px; }
+  background-color: #353535;
+  height: 860px;
+  padding: 50px; }
   .cd-reader h1 {
     color: white; }
+  .cd-reader .add-button {
+    background: #F36D5D;
+    color: #F2F2F2;
+    border: none;
+    text-transform: uppercase;
+    height: 34px;
+    padding: 2px 22px;
+    border-radius: 20px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    font-size: 13px;
+    outline: none;
+    margin-top: 14px;
+    float: right; }
+    .cd-reader .add-button:hover {
+      background: #E66153;
+      cursor: pointer; }
 
 .grid {
   margin: 0 auto;
@@ -120,6 +148,7 @@ Main Components
   padding: 0 1em; }
 
 .grid__item {
+  position: relative;
   display: inline-block;
   margin: 0.5em 0.5em;
   border-radius: 4px;
@@ -128,6 +157,28 @@ Main Components
   .grid__item img {
     width: 221px;
     box-shadow: 0px 3px 5px rgba(53, 53, 53, 0.3); }
+  .grid__item .action {
+    position: absolute;
+    bottom: 2px;
+    right: 0; }
+  .grid__item:hover .add-button {
+    display: block; }
+  .grid__item .add-button {
+    display: none;
+    background: #F36D5D;
+    color: #F2F2F2;
+    border: none;
+    text-transform: uppercase;
+    height: 24px;
+    width: 24px;
+    border-radius: 3px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    outline: none;
+    float: right; }
+    .grid__item .add-button:hover {
+      background: #E66153;
+      cursor: pointer; }
 
 .grid__item:hover {
   cursor: move;
