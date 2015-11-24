@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "node-sass scss/style.scss css/style.css",
-    "sass-watch": "node-sass scss/style.scss css/style.css --watch",
+    "sass-watch": "node-sass scss/lists.scss css/lists.css --watch",
     "serve": "ws --port 9000",
     "start": "parallelshell 'npm run serve' 'npm run sass-watch'"
   },
