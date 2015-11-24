@@ -20,10 +20,26 @@ jQuery(document).ready(function($){
 	});
 
 	function toggleManage() {
-		$('.cd-filters').toggleClass('is-managing');
-		!isManaging ? $(this).text('Cancel') : $(this).text('Manage collections');
 		isManaging = !isManaging;
+		$('.cd-filters').toggleClass('is-managing');
+		$('.editable').prop('contentEditable', isManaging);
+		isManaging ? $('.cd-manage-trigger').text('Cancel') : $('.cd-manage-trigger').text('Manage collections');
 	}
+
+	$('body').on('keydown', '[contenteditable]', function(e) {
+	    // trap the return key being pressed
+	    if (e.keyCode === 13) {
+	    var filter =
+	      '<li class="filter" data-filter=".color-3">' +
+			'<i class="fa fa-pencil"></i>' +
+			'<a href="#0" data-type="color-3"><span class="editable">'+$(e.target).text()+'</span> (0)</a>' +
+		  '</li>';
+		  $(filter).insertBefore($(e.target).parents('li'))
+	      $(e.target).text('New collection')
+	      toggleManage()
+	      return false;
+	    }
+	  });
 
 	//mobile version - detect click event on filters tab
 	var filter_tab_placeholder = $('.cd-tab-filter .placeholder a'),
@@ -31,6 +47,7 @@ jQuery(document).ready(function($){
 		filter_tab_placeholder_text = filter_tab_placeholder.text();
 
 	$('.cd-tab-filter li').on('click', function(event){
+		if(isManaging) return;
 		//detect which tab filter item was selected
 		var selected_filter = $(event.target).data('type');
 
@@ -142,7 +159,10 @@ jQuery(document).ready(function($){
 	    document.getElementById('dropables1'),
 	    document.getElementById('dropables2'),
 	    document.getElementById('dropables3')], {
-	    copy: true
+	    copy: true,
+	    moves: function (el, source, handle, sibling) {
+		    return !$(el).parents('.filter').length; // elements are always draggable by default
+		},
 	})
 	  .on('drag', function (el, container) {
 	    if(isManaging) toggleManage();

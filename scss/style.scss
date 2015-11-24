@@ -176,6 +176,10 @@ xtab-filter
 		.filter-new {
 			display: inline-block;
 		}
+
+		.filter-all {
+			display: none;
+		}
 	}
 
 	li {
@@ -240,6 +244,7 @@ xtab-filter
 			box-shadow: none;
 			text-align: center;
 			transition: all 0.5s;
+			transition-delay: 0, 0.5s;
 		}
 
 		.filter-new {

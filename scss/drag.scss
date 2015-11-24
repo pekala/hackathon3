@@ -53,7 +53,13 @@
   display: none !important;
 }
 
-.ex-over {
+.cd-filters .ex-over {
   transform: scale(1.05);
   transition: transform 0.5s;
+}
+
+.gu-unselectable {
+  .cd-filter-trigger, .cd-manage-trigger  {
+    display: none;
+  }
 }

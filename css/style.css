@@ -45,9 +45,12 @@
 .gu-transit {
   display: none !important; }
 
-.ex-over {
+.cd-filters .ex-over {
   transform: scale(1.05);
   transition: transform 0.5s; }
+
+.gu-unselectable .cd-filter-trigger, .gu-unselectable .cd-manage-trigger {
+  display: none; }
 
 /* --------------------------------
 
@@ -184,6 +187,8 @@ xtab-filter
     display: inline; }
   .cd-tab-filter ul.is-managing .filter-new {
     display: inline-block; }
+  .cd-tab-filter ul.is-managing .filter-all {
+    display: none; }
   .cd-tab-filter li {
     display: none; }
     .cd-tab-filter li:first-child {
@@ -228,7 +233,8 @@ xtab-filter
         position: static;
         box-shadow: none;
         text-align: center;
-        transition: all 0.5s; }
+        transition: all 0.5s;
+        transition-delay: 0, 0.5s; }
       .cd-tab-filter .filter-new {
         display: none; }
       .cd-tab-filter li {
@@ -697,6 +703,9 @@ xcustom form elements
 .gu-transit {
   display: none !important; }
 
-.ex-over {
+.cd-filters .ex-over {
   transform: scale(1.05);
   transition: transform 0.5s; }
+
+.gu-unselectable .cd-filter-trigger, .gu-unselectable .cd-manage-trigger {
+  display: none; }
