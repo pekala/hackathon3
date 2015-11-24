@@ -87,8 +87,8 @@ Main Components
     width: 5.5em;
     height: 5.5em;
     border-radius: 4px;
-    background: #a2aab0;
-    color: #d2dee5;
+    background: $tan-500;
+    color: $tan-300;
     text-align: center;
 }
 
@@ -104,7 +104,7 @@ Main Components
 }
 
 .is-dragging {
-    background: #525b62;
+    background: $tan-900;
 }
 
 .is-active {
@@ -139,7 +139,7 @@ Main Components
     height: 100%;
     overflow-y: auto;
     overflow-x: hidden;
-    background: #34495e;
+    background: $tangerine-500;
     text-align: left;
     -webkit-transition: -webkit-transform 0.5s;
     transition: transform 0.5s;
@@ -173,14 +173,14 @@ Main Components
     width: 12em;
     height: 12em;
     border-radius: 4px;
-    background: #6686a7;
+    background: $tangerine-700;
     text-align: center;
     -webkit-transition: -webkit-transform 0.3s, background 0.3s;
   transition: transform 0.3s, background 0.3s;
 }
 
 .drop-area__item.highlight {
-    background: #84a4c4;
+    background: $tangerine-600;
     -webkit-transform: scale3d(1.08,1.08,1);
     transform: scale3d(1.08,1.08,1);
 }
@@ -224,6 +224,49 @@ Main Components
     opacity: 1;
     -webkit-transform: scale3d(1,1,1);
     transform: scale3d(1,1,1);
+}
+
+.title,
+.title::after {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    margin: 0.30em 0;
+    height: 0.65em;
+    color: $grey-200;
+    -webkit-backface-visibility: hidden;
+}
+
+.add-new {
+    height: 60px;
+    line-height: 60px;
+    padding-right: 20px;
+    background: $tangerine-700;
+    color: $grey-200;
+    font-size: 13px;
+    width: 20em;
+    letter-spacing: 1px;
+    font-family: $primary-font;
+    text-transform: uppercase;
+    font-weight: 700;
+    border: none;
+    text-align: center;
+
+}
+
+.title {
+    width: 80%;
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
+
+.title::after {
+    width: 90%;
+    content: '';
 }
 
 .dummy,

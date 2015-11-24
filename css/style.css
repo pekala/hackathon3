@@ -297,7 +297,7 @@ li.grid__item {
   li.grid__item:hover .pub-meta .actions {
     display: block; }
   li.grid__item.selected {
-    box-shadow: 0 0 9px 3px #44D1F1; }
+    box-shadow: 0 0 9px 3px #76A5CC; }
   li.grid__item .pub-cover {
     float: left;
     width: 120px;
