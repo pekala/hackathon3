@@ -359,6 +359,9 @@ xgallery
 
 		}
 
+		.title {
+		}
+
 		.uploaded {
 			margin-top: 8px;
 			color: $tan-700;
@@ -366,18 +369,34 @@ xgallery
 		}
 
 		.pub-message {
-			display: inline-block;
 			margin-top: 8px;
 			background: $gold-500;
 			color: $white-500;
-			width: auto;
 			border-radius: 3px;
-			text-align: center;
 			padding: 4px 10px;
 			height: 20px;
 			font-size: 11px;
 			font-weight: 700;
+			display: inline-block;
 			text-transform: uppercase;
+		}
+
+		.tags {
+			margin-left: 8px;
+			display: inline-block;
+			border: 1px solid $tan-600;
+			border-radius: 5px;
+			color: $tan-600;
+			font-size: 11px;
+			padding: 3px 5px;
+			text-transform: uppercase;
+			width: auto;
+			height: auto;
+			&:hover {
+				color: $tan-800;
+				border: 1px solid $tan-800;
+				cursor: pointer;
+			}
 		}
 
 		.embed {
