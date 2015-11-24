@@ -1,3 +1,54 @@
+.gu-mirror {
+  position: fixed !important;
+  margin: 0 !important;
+  z-index: 9999 !important;
+  opacity: 0.8;
+  background: #FAF9F8; }
+
+.gu-hide {
+  display: none !important; }
+
+.gu-unselectable {
+  user-select: none !important; }
+
+.gu-transit {
+  opacity: 0.2; }
+
+.ex-start {
+  height: 12em !important;
+  background: #FFFFFF !important;
+  transition: all 0.5s; }
+
+.ex-start .filter {
+  width: 200px;
+  background-color: #EFECE6;
+  height: 150px;
+  transition: all 0.5s;
+  border-radius: 5px;
+  margin: 15px 10px;
+  padding: 10px 0 20px 0; }
+  .ex-start .filter a {
+    color: #A49F96;
+    box-shadow: none; }
+
+.ex-start .filter-new {
+  background-color: #56B66A; }
+  .ex-start .filter-new a {
+    color: #FFFFFF; }
+
+.ex-start .filter-new {
+  display: inline-block; }
+
+.ex-start .filter-all {
+  display: none; }
+
+.gu-transit {
+  display: none !important; }
+
+.ex-over {
+  transform: scale(1.05);
+  transition: transform 0.5s; }
+
 /* --------------------------------
 
 Primary style
@@ -564,7 +615,7 @@ xcustom form elements
   margin: 0 !important;
   z-index: 9999 !important;
   opacity: 0.8;
-  background: white; }
+  background: #FAF9F8; }
 
 .gu-hide {
   display: none !important; }
@@ -576,18 +627,26 @@ xcustom form elements
   opacity: 0.2; }
 
 .ex-start {
-  height: 10em !important;
-  background: white !important;
+  height: 12em !important;
+  background: #FFFFFF !important;
   transition: all 0.5s; }
 
 .ex-start .filter {
   width: 200px;
-  background-color: #a49f96;
+  background-color: #EFECE6;
   height: 150px;
-  transition: all 0.5s; }
+  transition: all 0.5s;
+  border-radius: 5px;
+  margin: 15px 10px;
+  padding: 10px 0 20px 0; }
+  .ex-start .filter a {
+    color: #A49F96;
+    box-shadow: none; }
 
 .ex-start .filter-new {
-  background-color: #56b66a; }
+  background-color: #56B66A; }
+  .ex-start .filter-new a {
+    color: #FFFFFF; }
 
 .ex-start .filter-new {
   display: inline-block; }

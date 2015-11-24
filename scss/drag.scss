@@ -3,7 +3,7 @@
   margin: 0 !important;
   z-index: 9999 !important;
   opacity: 0.8;
-  background: white;
+  background: $tan-300;
 }
 .gu-hide {
   display: none !important;
@@ -15,20 +15,31 @@
   opacity: 0.2;
 }
 .ex-start {
-  height: 10em !important;
-  background: white !important;
+  height: 12em !important;
+  background: $white-500 !important;
   transition: all 0.5s;
 }
 
 .ex-start .filter {
     width: 200px;
-    background-color: rgba(#A49F96, 50%);
+    background-color: $tan-400;
     height: 150px;
     transition: all 0.5s;
+    border-radius: 5px;
+    margin: 15px 10px;
+    padding: 10px 0 20px 0;
+
+    a {
+      color: $tan-800;
+      box-shadow: none;
+    }
 }
 
 .ex-start .filter-new {
-    background-color: rgba(#56B66A, 50%);
+    background-color: $green-500;
+    a {
+      color: $white-500;
+    }
 }
 
 .ex-start .filter-new {
