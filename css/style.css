@@ -119,7 +119,7 @@ Main Components
       height: 100vh;
       overflow: auto;
       -webkit-overflow-scrolling: touch; }
-  .cd-main-content.is-fixed .cd-filter-trigger {
+  .cd-main-content.is-fixed .cd-filter-trigger, .cd-main-content.is-fixed .cd-manage-trigger {
     position: fixed; }
   @media only screen and (min-width: 768px) {
     .cd-main-content.is-fixed .cd-gallery {
@@ -176,6 +176,14 @@ xtab-filter
     border-bottom: 2px solid #D2CCC1;
     background-color: #FAF9F8;
     box-shadow: inset 0 -2px 0 #F36D5D; }
+    .cd-tab-filter ul i {
+      display: none; }
+    .cd-tab-filter ul i.fa-pencil {
+      margin-right: -12px; }
+  .cd-tab-filter ul.is-managing i {
+    display: inline; }
+  .cd-tab-filter ul.is-managing .filter-new {
+    display: inline-block; }
   .cd-tab-filter li {
     display: none; }
     .cd-tab-filter li:first-child {
@@ -300,7 +308,7 @@ xgallery
           content: "";
           display: table; }
       .cd-gallery li {
-        width: 33%;
+        width: 100%;
         margin-bottom: 10px; } }
   @media only screen and (min-width: 1170px) {
     .cd-gallery {
@@ -310,7 +318,7 @@ xgallery
       -moz-transition: width 0.3s;
       transition: width 0.3s; }
       .cd-gallery li {
-        width: 33%; }
+        width: 100%; }
       .cd-gallery.filter-is-visible {
         /* reduce width when filter is visible */
         width: 80%; } }
@@ -419,7 +427,6 @@ xfilter
       text-transform: uppercase;
       font-size: 1.3rem;
       font-weight: 700;
-      padding-left: 24px;
       background-position: left center;
       -webkit-transition: color 0.3s;
       -moz-transition: color 0.3s;
@@ -427,6 +434,39 @@ xfilter
       .no-touch .cd-filter-trigger:hover {
         color: #F36D5D; }
       .cd-filter-trigger.filter-is-visible, .cd-filter-trigger.filter-is-visible:hover {
+        color: #FAF9F8; } }
+
+.cd-manage-trigger {
+  position: absolute;
+  top: 0;
+  height: 50px;
+  line-height: 50px;
+  width: 60px;
+  /* image replacement */
+  overflow: hidden;
+  text-indent: 100%;
+  color: transparent;
+  white-space: nowrap;
+  z-index: 3; }
+  .cd-manage-trigger.filter-is-visible {
+    pointer-events: none; }
+  @media only screen and (min-width: 1170px) {
+    .cd-manage-trigger {
+      width: auto;
+      right: 2%;
+      text-indent: 0;
+      color: #78756E;
+      text-transform: uppercase;
+      font-size: 1.3rem;
+      font-weight: 700;
+      padding-left: 24px;
+      background-position: left center;
+      -webkit-transition: color 0.3s;
+      -moz-transition: color 0.3s;
+      transition: color 0.3s; }
+      .no-touch .cd-manage-trigger:hover {
+        color: #F36D5D; }
+      .cd-manage-trigger.filter-is-visible, .cd-manage-trigger.filter-is-visible:hover {
         color: #FAF9F8; } }
 
 /* --------------------------------

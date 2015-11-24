@@ -14,6 +14,17 @@ jQuery(document).ready(function($){
 		});
 	}
 
+	var isManaging = false;
+	$('.cd-manage-trigger').on('click', function() {
+		toggleManage();
+	});
+
+	function toggleManage() {
+		$('.cd-filters').toggleClass('is-managing');
+		!isManaging ? $(this).text('Cancel') : $(this).text('Manage collections');
+		isManaging = !isManaging;
+	}
+
 	//mobile version - detect click event on filters tab
 	var filter_tab_placeholder = $('.cd-tab-filter .placeholder a'),
 		filter_tab_placeholder_default_value = 'Select',
@@ -124,6 +135,29 @@ jQuery(document).ready(function($){
 	    	}
 	  	}, 200 );
 	});
+
+
+	dragula([
+	    document.getElementById('draggables'),
+	    document.getElementById('dropables1'),
+	    document.getElementById('dropables2'),
+	    document.getElementById('dropables3')], {
+	    copy: true
+	})
+	  .on('drag', function (el, container) {
+	    if(isManaging) toggleManage();
+	    $('#dropables').addClass('ex-start');
+	    el.className = el.className.replace('ex-moved', '');
+	  }).on('drop', function (el) {
+	    $(el).remove();
+	   $('#dropables').removeClass('ex-start');
+	  }).on('over', function (el, container) {
+	    container.className += ' ex-over';
+	  }).on('out', function (el, container) {
+	    container.className = container.className.replace('ex-over', '');
+	  });
+
+
 });
 
 /*****************************************************

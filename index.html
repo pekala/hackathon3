@@ -5,16 +5,17 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
 	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
 	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
 	<script src="js/modernizr.js"></script> <!-- Modernizr -->
 
-	<title>Content Filters | CodyHouse</title>
+	<title>Your publications</title>
 </head>
 <body>
 	<header class="cd-header">
-		<h1>Issuu header</h1>
+		<h1>issuu header...</h1>
 	</header>
 
 	<main class="cd-main-content">
@@ -24,16 +25,24 @@
 					<li class="placeholder">
 						<a data-type="all" href="#0">All</a> <!-- selected option on mobile -->
 					</li>
-					<li class="filter filter-all"><a class="selected" href="#0" data-type="all">All (32)</a></li>
-					<li class="filter" data-filter=".color-1" id="dropables1"><a href="#0" data-type="color-1">Boneshaker (12)</a></li>
-					<li class="filter" data-filter=".color-2" id="dropables2"><a href="#0" data-type="color-2">Shaked boner (5)</a></li>
-					<li class="filter filter-new" id="dropables3"><a href="#0" data-type="all">New collection</a></li>
+					<li class="filter filter-all">
+						<a class="selected" href="#0" data-type="all">All (32)</a>
+					</li>
+					<li class="filter" data-filter=".color-1" id="dropables1">
+						<i class="fa fa-pencil"></i>
+						<a href="#0" data-type="color-1">Boneshaker (12)</a>
+					</li>
+					<li class="filter" data-filter=".color-2" id="dropables2">
+						<i class="fa fa-pencil"></i>
+						<a href="#0" data-type="color-2">Shaked boner (5)</a>
+					</li>
+					<li class="filter filter-new" id="dropables3"><a href="#0" data-type="all"><i class="fa fa-plus"></i> New collection</a></li>
 				</ul> <!-- cd-filters -->
 			</div> <!-- cd-tab-filter -->
 		</div> <!-- cd-tab-filter-wrapper -->
 		<section class="cd-gallery">
 			<ul id="draggables" class="grid">
-				<li class="mix grid__item color-1 check1 radio2 option3">
+				<li class="mix grid__item color-1 check1 radio2 option3 extended">
 						<div class="pub-cover">
 						</div>
 						<div class="pub-title">
@@ -125,11 +134,11 @@
 		</div> <!-- cd-filter -->
 
 		<a href="#0" class="cd-filter-trigger"><img src="img/filters.svg" class="icon">Filters</a>
+		<a href="#0" class="cd-manage-trigger ">Manage collections</a>
 	</main> <!-- cd-main-content -->
 <script src="js/jquery-2.1.1.js"></script>
 <script src="js/jquery.mixitup.min.js"></script>
 <script src="node_modules/dragula/dist/dragula.js"></script>
 <script src="js/main.js"></script>
-<script src="js/drag.js"></script>
 </body>
 </html>
