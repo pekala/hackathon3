@@ -313,11 +313,13 @@ xgallery
 
 -------------------------------- */
 	li.grid__item {
-		margin-bottom: 10px;
+		text-align: left;
 		box-shadow: 0 1px 4px rgba(#000, .1);
 		background: white;
 		padding: 10px;
 		display: none;
+		margin: 0 auto;
+		margin-bottom: 10px;
 
 		.pub-cover {
 			float: left;
@@ -431,6 +433,7 @@ xgallery
 .cd-gallery {
 	padding: 26px 5%;
 	width: 100%;
+	text-align: center;
 
 
 
@@ -456,22 +459,22 @@ xgallery
 
 		ul {
 			@include clearfix;
-			text-align: justify;
+			// text-align: justify;
 		}
 
 		li {
-			width: 100%;
+			width: 50%;
 			margin-bottom: 10px;
 		}
 	}
 
 	@include MQ(L) {
-		padding: 20px 300px;
 		float: right;
 		@include transition(width .3s);
 
 		li {
-			width: 100%;
+			width: 75%;
+			max-width: 700px;
 		}
 
 		&.filter-is-visible {

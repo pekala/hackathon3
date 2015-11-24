@@ -14,6 +14,7 @@ jQuery(document).ready(function($){
 		});
 	}
 
+	var drake;
 	var isManaging = false;
 	$('.cd-manage-trigger').on('click', function() {
 		toggleManage();
@@ -25,17 +26,31 @@ jQuery(document).ready(function($){
 		$('.editable').prop('contentEditable', isManaging);
 		isManaging ? $('.cd-manage-trigger').text('Cancel') : $('.cd-manage-trigger').text('Manage collections');
 	}
+	function selectElementContents(el) {
+	    var range = document.createRange();
+	    range.selectNodeContents(el);
+	    var sel = window.getSelection();
+	    sel.removeAllRanges();
+	    sel.addRange(range);
+	}
+
+	$('body').on('click', '.is-managing i', function (e) {
+		var icon = $(e.target);
+		var el = icon.parent().find('.editable');
+		console.log(icon.parent(), icon.parent().find('.editable'))
+		selectElementContents(el[0]);
+	})
 
 	$('body').on('keydown', '[contenteditable]', function(e) {
 	    // trap the return key being pressed
 	    if (e.keyCode === 13) {
 	    var filter =
-	      '<li class="filter" data-filter=".color-3">' +
-			'<i class="fa fa-pencil"></i>' +
-			'<a href="#0" data-type="color-3"><span class="editable">'+$(e.target).text()+'</span> (0)</a>' +
-		  '</li>';
-		  $(filter).insertBefore($(e.target).parents('li'))
+	      $('<li class="filter droppable" data-filter=".color-3">' +
+			'<a href="#0" data-type="color-3"><i class="fa fa-pencil"></i><span class="editable">'+$(e.target).text()+'</span> (0)</a>' +
+		  '</li>');
+		  filter.insertBefore($(e.target).parents('li'))
 	      $(e.target).text('New collection')
+	      drake.containers.push(filter[0]);
 	      toggleManage()
 	      return false;
 	    }
@@ -154,7 +169,7 @@ jQuery(document).ready(function($){
 	});
 
 
-	dragula([
+	drake = dragula([
 	    document.getElementById('draggables'),
 	    document.getElementById('dropables1'),
 	    document.getElementById('dropables2'),

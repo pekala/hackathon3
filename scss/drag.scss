@@ -4,6 +4,13 @@
   z-index: 9999 !important;
   opacity: 0.8;
   background: $tan-300;
+  width: 140px !important;
+  .pub-meta {
+    display: none;
+  }
+  .stats {
+    display: none;
+  }
 }
 .gu-hide {
   display: none !important;

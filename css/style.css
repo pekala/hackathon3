@@ -3,7 +3,12 @@
   margin: 0 !important;
   z-index: 9999 !important;
   opacity: 0.8;
-  background: #FAF9F8; }
+  background: #FAF9F8;
+  width: 140px !important; }
+  .gu-mirror .pub-meta {
+    display: none; }
+  .gu-mirror .stats {
+    display: none; }
 
 .gu-hide {
   display: none !important; }
@@ -282,11 +287,13 @@ xgallery
 
 -------------------------------- */
 li.grid__item {
-  margin-bottom: 10px;
+  text-align: left;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
   background: white;
   padding: 10px;
-  display: none; }
+  display: none;
+  margin: 0 auto;
+  margin-bottom: 10px; }
   li.grid__item .pub-cover {
     float: left;
     width: 120px;
@@ -367,7 +374,8 @@ li.grid__item {
 
 .cd-gallery {
   padding: 26px 5%;
-  width: 100%; }
+  width: 100%;
+  text-align: center; }
   .cd-gallery img {
     display: block;
     width: 100%; }
@@ -380,24 +388,22 @@ li.grid__item {
   @media only screen and (min-width: 768px) {
     .cd-gallery {
       padding: 40px 3%; }
-      .cd-gallery ul {
-        text-align: justify; }
-        .cd-gallery ul::after {
-          clear: both;
-          content: "";
-          display: table; }
+      .cd-gallery ul::after {
+        clear: both;
+        content: "";
+        display: table; }
       .cd-gallery li {
-        width: 100%;
+        width: 50%;
         margin-bottom: 10px; } }
   @media only screen and (min-width: 1170px) {
     .cd-gallery {
-      padding: 20px 300px;
       float: right;
       -webkit-transition: width 0.3s;
       -moz-transition: width 0.3s;
       transition: width 0.3s; }
       .cd-gallery li {
-        width: 100%; }
+        width: 75%;
+        max-width: 700px; }
       .cd-gallery.filter-is-visible {
         /* reduce width when filter is visible */
         width: 80%; } }
@@ -735,7 +741,12 @@ xcustom form elements
   margin: 0 !important;
   z-index: 9999 !important;
   opacity: 0.8;
-  background: #FAF9F8; }
+  background: #FAF9F8;
+  width: 140px !important; }
+  .gu-mirror .pub-meta {
+    display: none; }
+  .gu-mirror .stats {
+    display: none; }
 
 .gu-hide {
   display: none !important; }
