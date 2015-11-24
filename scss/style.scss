@@ -326,12 +326,16 @@ xgallery
 				display: block;
 			}
 		}
+		&.selected {
+			box-shadow: 0 0 9px 3px #44D1F1;
+		}
 
 		.pub-cover {
 			float: left;
 			width: 120px;
 			height: auto;
 			margin-right: 10px;
+			cursor: move;
 		}
 
 		.pub-meta {

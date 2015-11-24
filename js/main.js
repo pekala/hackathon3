@@ -20,6 +20,18 @@ jQuery(document).ready(function($){
 		toggleManage();
 	});
 
+	$('.grid__item').on('click', function(e) {
+		if(!$(e.target).is('.grid__item') && !$(e.target).is('img')) return;
+		if(e.shiftKey) {
+			var previous = $(this).prevAll('.grid__item.selected');
+	        if(previous.length) {
+	        	console.log(previous.index(), $(this).index())
+	        }
+	        $('.grid__item').slice(previous.index()+1, $(this).index()).toggleClass('selected');
+	    }
+		$(this).toggleClass('selected');
+	});
+
 	function toggleManage() {
 		isManaging = !isManaging;
 		$('.cd-filters').toggleClass('is-managing');
@@ -185,6 +197,7 @@ jQuery(document).ready(function($){
 	    el.className = el.className.replace('ex-moved', '');
 	  }).on('drop', function (el) {
 	    $(el).remove();
+	    $('.grid__item').removeClass('selected');
 	   $('#dropables').removeClass('ex-start');
 	  }).on('over', function (el, container) {
 	    container.className += ' ex-over';

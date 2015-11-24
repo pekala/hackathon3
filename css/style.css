@@ -296,11 +296,14 @@ li.grid__item {
   margin-bottom: 10px; }
   li.grid__item:hover .pub-meta .actions {
     display: block; }
+  li.grid__item.selected {
+    box-shadow: 0 0 9px 3px #44D1F1; }
   li.grid__item .pub-cover {
     float: left;
     width: 120px;
     height: auto;
-    margin-right: 10px; }
+    margin-right: 10px;
+    cursor: move; }
   li.grid__item .pub-meta {
     float: left;
     height: auto;
