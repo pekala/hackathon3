@@ -20,23 +20,17 @@
 	<main class="cd-main-content">
 		<div class="cd-tab-filter-wrapper">
 			<div class="cd-tab-filter">
-				<ul class="cd-filters">
+				<ul class="cd-filters" id="dropables">
 					<li class="placeholder">
 						<a data-type="all" href="#0">All</a> <!-- selected option on mobile -->
 					</li>
-					<li class="filter"><a class="selected" href="#0" data-type="all">All (32)</a></li>
-					<li class="filter" data-filter=".color-1"><a href="#0" data-type="color-1">Boneshaker (12)</a></li>
-					<li class="filter" data-filter=".color-2"><a href="#0" data-type="color-2">Taschen (5)</a></li>
+					<li class="filter filter-all"><a class="selected" href="#0" data-type="all">All (32)</a></li>
+					<li class="filter" data-filter=".color-1" id="dropables1"><a href="#0" data-type="color-1">Boneshaker (12)</a></li>
+					<li class="filter" data-filter=".color-2" id="dropables2"><a href="#0" data-type="color-2">Shaked boner (5)</a></li>
+					<li class="filter filter-new" id="dropables3"><a href="#0" data-type="all">New collection</a></li>
 				</ul> <!-- cd-filters -->
 			</div> <!-- cd-tab-filter -->
 		</div> <!-- cd-tab-filter-wrapper -->
-		<div id="drop-area" class="drop-area">
-			<div>
-				<div class="drop-area__item">Collection 1</div>
-				<div class="drop-area__item">Collection 2</div>
-				<div class="drop-area__item">Crate new collection</div>
-			</div>
-		</div>
 		<section class="cd-gallery">
 			<ul id="grid" class="grid">
 				<li class="mix grid__item color-1 check1 radio2 option3">
@@ -132,11 +126,9 @@
 
 		<a href="#0" class="cd-filter-trigger">Filters</a>
 	</main> <!-- cd-main-content -->
-	<div class="drop-overlay"></div>
 <script src="js/jquery-2.1.1.js"></script>
 <script src="js/jquery.mixitup.min.js"></script>
-<script src="js/draggabilly.pkgd.min.js"></script>
-<script src="js/dragdrop.js"></script>
+<script src="node_modules/dragula/dist/dragula.js"></script>
 <script src="js/main.js"></script>
 <script src="js/drag.js"></script>
 </body>
