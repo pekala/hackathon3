@@ -214,6 +214,18 @@ Main Components
     content: '\f067';
 }
 
+.show-view .drop-area__item::before {
+    content: '';
+}
+
+.publication-in-list {
+    display: none;
+}
+
+.show-view .publication-in-list {
+    display: inline-block;
+}
+
 .drop-feedback.drop-area__item::before {
     opacity: 0;
     -webkit-transform: scale3d(0,0,1);
@@ -344,5 +356,27 @@ Main Components
     }
 }
 
+.show-list {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    border: none;
+    background: $tangerine-500;
+    border-radius: 100%;
+    color: white;
+    font-size: 2em;
+    width: 70px;
+    height: 70px;
+    outline: none;
+    box-shadow: 0px 3px 5px rgba($ebony-800,.3);
+    transform: scale3d(1,1,1);
+    transition: transform 0.5s;
+    cursor: pointer;
+    &:hover {
+        -webkit-transform: scale3d(1.08,1.08,1);
+        transform: scale3d(1.08,1.08,1);
+        transition: transform 0.5s;
+    }
+}
 
 @import './lists_drag';

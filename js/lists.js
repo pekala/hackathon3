@@ -42,4 +42,15 @@ jQuery(document).ready(function($){
         $('#drop-area').removeClass('show');
     });
 
+    $('.show-list').click(function() {
+        $('#drop-area').toggleClass('show show-view');
+    });
+
+    $('body').click(function (e) {
+        console.log(e)
+        if(!$(e.target).parents('.drop-area').length && !$(e.target).is('.show-list') && !$(e.target).parents('.show-list').length) {
+            $('#drop-area').removeClass('show show-view');
+        }
+    })
+
 });
