@@ -10,10 +10,14 @@ jQuery(document).ready(function($){
         el.className = el.className.replace('ex-moved', '');
         $('#drop-area').addClass('show');
       })
-      .on('drop', function (el) {
+      .on('drop', function (el, target) {
         $(el).remove();
         $('.grid__item').removeClass('selected');
         $('#drop-area').removeClass('show');
+        $(target).addClass('drop-feedback');
+        setTimeout(function () {
+            $(target).removeClass('drop-feedback');
+        }, 700);
       })
       .on('over', function (el, container) {
         $(container).addClass('item-over');

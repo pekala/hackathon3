@@ -169,24 +169,30 @@ Main Components
   text-align: left;
   -webkit-transition: -webkit-transform 0.5s;
   transition: transform 0.5s;
+  transition-delay: 0.5s;
   -webkit-transform: translate3d(20px, 0, 0);
   transform: translate3d(20px, 0, 0); }
 
 .drop-area.show {
   -webkit-transform: translate3d(-16em, 0, 0);
-  transform: translate3d(-16em, 0, 0); }
+  transform: translate3d(-16em, 0, 0);
+  transition: transform 0.5s;
+  transition-delay: 0; }
 
 .drop-area > div {
   width: 100%;
   height: 100%;
   -webkit-transition: -webkit-transform 0.4s 0.1s;
   transition: transform 0.4s 0.1s;
+  transition-delay: 0.5s;
   -webkit-transform: translate3d(50%, 0, 0);
   transform: translate3d(50%, 0, 0); }
 
 .drop-area.show > div {
   -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0); }
+  transform: translate3d(0, 0, 0);
+  transition: transform 0.4s 0.1s;
+  transition-delay: 0; }
 
 .drop-area__item {
   position: relative;
@@ -344,6 +350,6 @@ Main Components
 .gu-transit {
   opacity: .5; }
 
-.item-over {
+.drop-area .item-over {
   transform: scale(1.07);
   transition: transform 0.1s; }
