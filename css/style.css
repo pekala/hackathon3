@@ -381,6 +381,10 @@ li.grid__item {
       font-weight: 700;
       padding: 6px 20px;
       border-radius: 20px; }
+      li.grid__item .stats button:hover {
+        border: 2px solid #A49F96;
+        color: #78756E;
+        cursor: pointer; }
   li.grid__item.gap {
     /* used in combination with text-align: justify to align gallery elements */
     opacity: 0;

@@ -444,6 +444,12 @@ xgallery
 				font-weight: 700;
 				padding: 6px 20px;
 				border-radius: 20px;
+
+				&:hover {
+					border: 2px solid $tan-800;
+					color: $tan-900;
+					cursor: pointer;
+				}
 			}
 		}
 
