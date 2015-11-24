@@ -13,7 +13,7 @@ jQuery(document).ready(function($){
       .on('drop', function (el, target) {
         $(el).remove();
         $('.grid__item').removeClass('selected');
-        $('#drop-area').removeClass('show');
+        $('#drop-area').removeClass('show show-view');
         $(target).addClass('drop-feedback');
         setTimeout(function () {
             $(target).removeClass('drop-feedback');
@@ -40,7 +40,7 @@ jQuery(document).ready(function($){
         setTimeout(function () {
             el.removeClass('drop-feedback');
         }, 500);
-        $('#drop-area').removeClass('show');
+        $('#drop-area').removeClass('show show-view');
     });
 
     $('.show-list').click(function() {
@@ -50,7 +50,10 @@ jQuery(document).ready(function($){
     $('body').click(function (e) {
         console.log(e)
         if(!$(e.target).parents('.drop-area').length && !$(e.target).is('.show-list') && !$(e.target).parents('.show-list').length) {
-            $('#drop-area').removeClass('show show-view');
+            $('#drop-area').removeClass('show');
+            setTimeout(function () {
+                $('#drop-area').removeClass('show-view');
+            }, 500);
         }
     })
 
