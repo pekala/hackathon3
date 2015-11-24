@@ -32,6 +32,7 @@ jQuery(document).ready(function($){
 
     $('.add-button').click(function(e) {
         $('#drop-area').addClass('show');
+        e.stopPropagation();
     });
     $('.drop-area__item').click(function(e) {
         var el = $(this);
