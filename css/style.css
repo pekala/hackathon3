@@ -294,6 +294,8 @@ li.grid__item {
   display: none;
   margin: 0 auto;
   margin-bottom: 10px; }
+  li.grid__item:hover .pub-meta .actions {
+    display: block; }
   li.grid__item .pub-cover {
     float: left;
     width: 120px;
@@ -305,7 +307,7 @@ li.grid__item {
     padding-top: 4px;
     color: #78756E; }
     li.grid__item .pub-meta .actions {
-      display: block; }
+      display: none; }
       li.grid__item .pub-meta .actions button {
         margin-top: 8px;
         background: none;

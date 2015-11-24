@@ -321,6 +321,12 @@ xgallery
 		margin: 0 auto;
 		margin-bottom: 10px;
 
+		&:hover {
+			.pub-meta .actions {
+				display: block;
+			}
+		}
+
 		.pub-cover {
 			float: left;
 			width: 120px;
@@ -335,7 +341,7 @@ xgallery
 			color: $tan-900;
 
 			.actions {
-				display: block;
+				display: none;
 
 				button {
 					margin-top: 8px;
