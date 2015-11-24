@@ -36,6 +36,10 @@ body {
 	background-color: $tan-300;
 }
 
+img {
+	width: 120px;
+}
+
 a {
 	color: $color-2;
 	text-decoration: none;
@@ -308,18 +312,113 @@ xtab-filter
 xgallery
 
 -------------------------------- */
-
-.cd-gallery {
-	padding: 26px 5%;
-	width: 100%;
-
-	li {
+	li.grid__item {
 		margin-bottom: 10px;
 		box-shadow: 0 1px 4px rgba(#000, .1);
-		display: none;
 		background: white;
-		min-height: 100px;
 		padding: 10px;
+		display: none;
+
+		.pub-cover {
+			float: left;
+			width: 120px;
+			height: auto;
+			margin-right: 10px;
+		}
+
+		.pub-meta {
+			float: left;
+			height: auto;
+			padding-top: 4px;
+			color: $tan-900;
+
+			.actions {
+				display: block;
+
+				button {
+					margin-top: 8px;
+					background: none;
+					border: 0;
+					font-size: 12px;
+					font-weight: 700;
+					padding: 4px;
+					text-transform: uppercase;
+					border-radius: 20px;
+					color: $tan-800;
+					margin-right: 20px;
+
+					&:hover {
+						color: $tan-900;
+						cursor: pointer;
+					}
+				}
+
+			}
+
+		}
+
+		.uploaded {
+			margin-top: 8px;
+			color: $tan-700;
+			font-size: 13px;
+		}
+
+		.pub-message {
+			display: inline-block;
+			margin-top: 8px;
+			background: $gold-500;
+			color: $white-500;
+			width: auto;
+			border-radius: 3px;
+			text-align: center;
+			padding: 4px 10px;
+			height: 20px;
+			font-size: 11px;
+			font-weight: 700;
+			text-transform: uppercase;
+		}
+
+		.embed {
+			float: right;
+			width: 120px;
+			padding-right: 10%;
+		}
+
+		.stats {
+			color: $tan-900;
+			font-size: 13px;
+			text-transform: uppercase;
+			float: right;
+			padding: 0 10px 0 0;
+
+			.green {
+				color: $green-500;
+			}
+
+			.red {
+				color: $red-500;
+			}
+
+			div {
+				margin: 10px 0;
+				b {
+					font-weight: 700;
+				}
+			}
+
+			button {
+				margin-top: 20px;
+				background: transparent;
+				color: $tan-700;
+				height: 30px;
+				border: 2px solid $tan-500;
+				text-transform: uppercase;
+				font-family: $primary-font;
+				font-weight: 700;
+				padding: 6px 20px;
+				border-radius: 20px;
+			}
+		}
 
 		&.gap {
 			/* used in combination with text-align: justify to align gallery elements */
@@ -329,9 +428,15 @@ xgallery
 		}
 	}
 
-	.extended {
-		min-height: 250px;
-	}
+.cd-gallery {
+	padding: 26px 5%;
+	width: 100%;
+
+
+
+	// .extended {
+	// 	min-height: 250px;
+	// }
 
 	img {
 		display: block;
@@ -361,7 +466,7 @@ xgallery
 	}
 
 	@include MQ(L) {
-		padding: 10px;
+		padding: 20px 300px;
 		float: right;
 		@include transition(width .3s);
 
@@ -467,7 +572,7 @@ xfilter
 	height: $tab-filter-height;
 	line-height: $tab-filter-height;
 	width: 60px;
-
+	margin-left: 12px;
 	/* image replacement */
 	overflow: hidden;
 	text-indent: 100%;
