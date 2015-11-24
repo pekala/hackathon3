@@ -145,7 +145,7 @@ Main Components
 .grid {
   margin: 0 auto;
   max-width: 63em;
-  padding: 0 1em; }
+  padding: 1em; }
 
 .grid__item {
   position: relative;
@@ -256,6 +256,7 @@ Main Components
   margin: 3em 0 1em 2em;
   width: 12em;
   height: 12em;
+  padding: 0.2em;
   border-radius: 4px;
   background: #DE5647;
   text-align: center;
@@ -286,7 +287,43 @@ Main Components
   content: ''; }
 
 .publication-in-list {
-  display: none; }
+  display: none;
+  position: relative;
+  color: #F2F2F2;
+  background: #F36D5D;
+  display: block;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 2px;
+  font-size: 11px;
+  float: left;
+  text-transform: uppercase;
+  padding: 10px;
+  overflow: hidden; }
+  .publication-in-list span {
+    position: relative;
+    z-index: 9999; }
+  .publication-in-list:hover {
+    background: #E66153; }
+  .publication-in-list:before {
+    z-index: 1;
+    position: absolute;
+    height: 40px;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 60%;
+    content: '';
+    border-right: 1px solid #DE5647;
+    background: rgba(222, 86, 71, 0.5); }
+  .publication-in-list.progress20:before {
+    width: 20%; }
+  .publication-in-list.progress40:before {
+    width: 40%; }
+  .publication-in-list.progress60:before {
+    width: 60%; }
+  .publication-in-list.progress90:before {
+    width: 90%; }
 
 .show-view .publication-in-list {
   display: inline-block; }

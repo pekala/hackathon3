@@ -118,7 +118,7 @@ Main Components
 .grid {
     margin: 0 auto;
     max-width: 63em;
-    padding: 0 1em;
+    padding: 1em;
 }
 
 .grid__item {
@@ -255,6 +255,7 @@ Main Components
     margin: 3em 0 1em 2em;
     width: 12em;
     height: 12em;
+    padding: 0.2em;
     border-radius: 4px;
     background: $tangerine-700;
     text-align: center;
@@ -291,6 +292,43 @@ Main Components
 
 .publication-in-list {
     display: none;
+    position: relative;
+    color: $grey-200;
+    background: $tangerine-500;
+    display: block;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 2px;
+    font-size: 11px;
+    float: left;
+    text-transform: uppercase;
+    padding: 10px;
+    overflow: hidden;
+
+    span {
+        position: relative;
+        z-index: 9999;
+    }
+
+    &:hover {
+        background: $tangerine-600;
+    }
+    &:before {
+        z-index: 1;
+        position: absolute;
+        height: 40px;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 60%;
+        content: '';
+        border-right: 1px solid $tangerine-700;
+        background: rgba($tangerine-700,.5);
+    }
+    &.progress20:before { width: 20% }
+    &.progress40:before { width: 40% }
+    &.progress60:before { width: 60% }
+    &.progress90:before { width: 90% }
 }
 
 .show-view .publication-in-list {
