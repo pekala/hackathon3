@@ -2,9 +2,9 @@ jQuery(document).ready(function($){
     drake = dragula([
         document.getElementById('draggables')], {
         copy: true,
-        // moves: function (el, source, handle, sibling) {
-        //     return !$(el).parents('.filter').length; // elements are always draggable by default
-        // },
+        moves: function (el, source, handle, sibling) {
+            return !$(el).parents('.drop-area').length; // elements are always draggable by default
+        },
     })
       .on('drag', function (el, container) {
         el.className = el.className.replace('ex-moved', '');
@@ -29,4 +29,17 @@ jQuery(document).ready(function($){
     $('.drop-area__item').each(function (i, item) {
         drake.containers.push(item);
     });
+
+    $('.add-button').click(function(e) {
+        $('#drop-area').addClass('show');
+    });
+    $('.drop-area__item').click(function(e) {
+        var el = $(this);
+        el.addClass('drop-feedback');
+        setTimeout(function () {
+            el.removeClass('drop-feedback');
+        }, 500);
+        $('#drop-area').removeClass('show');
+    });
+
 });

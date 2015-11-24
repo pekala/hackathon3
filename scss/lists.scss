@@ -51,7 +51,7 @@ Main Components
 
 -------------------------------- */
 
-.cd-header {
+.cd-header, .cd-reader {
     position: relative;
     height: 150px;
     background-color: $tan-400;
@@ -71,6 +71,12 @@ Main Components
             line-height: 100px;
         }
     }
+}
+
+.cd-reader {
+    background-color: $ebony-500;
+    height: 650px;
+    h1 {color: white};
 }
 
 .grid {
@@ -172,6 +178,7 @@ Main Components
 }
 
 .drop-area__item {
+    cursor: pointer;
     position: relative;
     display: inline-block;
     margin: 3em 0 1em 2em;
@@ -243,6 +250,7 @@ Main Components
 }
 
 .add-new {
+    cursor: pointer;
     height: 60px;
     line-height: 60px;
     padding-right: 20px;
