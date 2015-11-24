@@ -75,21 +75,20 @@ Main Components
 
 .grid {
     margin: 0 auto;
-    max-width: 50em;
+    max-width: 63em;
     padding: 0 1em;
 }
 
 .grid__item {
     display: inline-block;
-    margin: 0.2em 0.1em;
-    font-size: 2em;
-    padding-top: 2.25em;
-    width: 5.5em;
-    height: 5.5em;
+    margin: 0.5em 0.5em;
     border-radius: 4px;
-    background: $tan-500;
     color: $tan-300;
     text-align: center;
+    img {
+        width: 221px;
+        box-shadow: 0px 3px 5px rgba($ebony-800,.3);
+    }
 }
 
 .grid__item:hover {
@@ -215,7 +214,7 @@ Main Components
 }
 
 .drop-area__item::after {
-    color: rgba(52,73,94,0.6);
+    color: rgba($grey-200,.8);
     content: '\f00c';
     font-size: 3em;
     margin-top: -0.5em;
