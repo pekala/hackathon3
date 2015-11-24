@@ -1,52 +1,19 @@
-(function() {
-    var body = document.body,
-        dropArea = document.getElementById( 'drop-area' ),
-        droppableArr = [], dropAreaTimeout;
+dragula([
+    document.getElementById('draggables'),
+    document.getElementById('dropables1'),
+    document.getElementById('dropables2'),
+    document.getElementById('dropables3')], {
+    copy: true
+})
+  .on('drag', function (el, container) {
+    $('#dropables').addClass('ex-start');
+    el.className = el.className.replace('ex-moved', '');
+  }).on('drop', function (el) {
+    $(el).remove();
+   $('#dropables').removeClass('ex-start');
+  }).on('over', function (el, container) {
+    container.className += ' ex-over';
+  }).on('out', function (el, container) {
+    container.className = container.className.replace('ex-over', '');
+  });
 
-    // initialize droppables
-    [].slice.call( document.querySelectorAll( '#drop-area .drop-area__item' )).forEach( function( el ) {
-        droppableArr.push( new Droppable( el, {
-            onDrop : function( instance, draggableEl ) {
-                // show checkmark inside the droppabe element
-                classie.add( instance.el, 'drop-feedback' );
-                clearTimeout( instance.checkmarkTimeout );
-                instance.checkmarkTimeout = setTimeout( function() {
-                    classie.remove( instance.el, 'drop-feedback' );
-                }, 800 );
-                // ...
-            }
-        } ) );
-    } );
-
-    // initialize draggable(s)
-    [].slice.call(document.querySelectorAll( '#grid .grid__item' )).forEach( function( el ) {
-        new Draggable( el, droppableArr, {
-            draggabilly : { },
-            onStart : function() {
-                // add class 'drag-active' to body
-                classie.add( body, 'drag-active' );
-                // clear timeout: dropAreaTimeout (toggle drop area)
-                clearTimeout( dropAreaTimeout );
-                // show dropArea
-                classie.add( dropArea, 'show' );
-            },
-            onEnd : function( wasDropped ) {
-                var afterDropFn = function() {
-                    // hide dropArea
-                    classie.remove( dropArea, 'show' );
-                    // remove class 'drag-active' from body
-                    classie.remove( body, 'drag-active' );
-                };
-
-                if( !wasDropped ) {
-                    afterDropFn();
-                }
-                else {
-                    // after some time hide drop area and remove class 'drag-active' from body
-                    clearTimeout( dropAreaTimeout );
-                    dropAreaTimeout = setTimeout( afterDropFn, 400 );
-                }
-            }
-        } );
-    } );
-})();

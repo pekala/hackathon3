@@ -216,10 +216,17 @@ xtab-filter
 		}
 
 		ul {
+			height: 50px;
+			background: white;
 			background: transparent;
 			position: static;
 			box-shadow: none;
 			text-align: center;
+			transition: all 0.5s;
+		}
+
+		.filter-new {
+			display: none;
 		}
 
 		li {
@@ -298,6 +305,10 @@ xgallery
 			height: 0;
 			display: inline-block;
 		}
+	}
+
+	.extended {
+		min-height: 250px;
 	}
 
 	img {

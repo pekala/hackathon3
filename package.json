@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/pekala/hackathon3#readme",
   "devDependencies": {
+    "dragula": "^3.5.4",
     "local-web-server": "^0.5.24",
     "node-sass": "^3.4.2",
     "parallelshell": "^2.0.0"
